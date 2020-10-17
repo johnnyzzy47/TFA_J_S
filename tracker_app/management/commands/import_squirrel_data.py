@@ -8,5 +8,5 @@ class Command(BaseCommand):
 
         def handle(self, *args, **kwargs):
             path = kwargs['path']
-            msg = f'You are importing from {file_}'
+            msg = f'You are importing from'
             self.stdout.write(self.style.SUCCESS(msg))
