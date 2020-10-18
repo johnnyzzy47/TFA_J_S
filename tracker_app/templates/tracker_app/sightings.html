@@ -1,0 +1,16 @@
+<!doctype html>
+<head>
+	<h1> *** SIGHTINGS VIEW *** </h1>
+</head>
+
+<body style="background-color:powderblue;">
+	<p><a href='/'>Go to main page</a> </p>
+	<h1> Click below to add a new squirrel </h1>
+	<p><a href = '/sightings/add'> Add Squirrel  </a></p>
+	<h2> Click on any Unique Squirrel ID to edit that Squirrel entry </h2>
+	<ul>
+		{% for squirrel in squirrels %}
+		<li> <a href='/sightings/{{squirrel.UID}}/'> {{squirrel.UID}} </a> </li>
+		{% endfor %}
+	</ul>
+</body>
