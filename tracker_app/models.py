@@ -6,7 +6,7 @@ from django.core.validators import MinLengthValidator
 class Squirrel(models.Model):
      X = models.DecimalField(
          max_length=100,
-         help_text=_('Longitude Coordinate for Squirrel sighting point'),
+         help_text=_('Longitude Coordinate for Squirrel sighting'),
          blank = True,
          max_digits=20,
          decimal_places = 15,
@@ -14,7 +14,7 @@ class Squirrel(models.Model):
 
      Y = models.DecimalField(
          max_length=100,
-         help_text=_('Latitude Coordinate for Squirrel sighting point'),
+         help_text=_('Latitude Coordinate for Squirrel sighting'),
          blank = True,
          max_digits=20,
          decimal_places = 15,
@@ -22,7 +22,7 @@ class Squirrel(models.Model):
      UID= models.CharField(
          max_length=100,
          validators=[MinLengthValidator(10)],
-         help_text=_('Identification tag for Squirrel sighting'),
+         help_text=_('Identification for Squirrel sighting'),
          primary_key= True,
          )
      AM='AM'
